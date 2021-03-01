@@ -1,1 +1,42 @@
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Whisper</title>
+  <link href="/assets/normalize.css" rel="stylesheet">
+  <link href="/assets/new.scss" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="header_nav">
+      <a href="#"><img class="logo_image" src="/assets/logo.png" alt="ロゴ"></a>
+      <ul>
+        <a href="#">ささやく</a>
+        <a href="#">自分のささやき一覧</a>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <%= form_with(model: @post, local: true) do |form| %>
+      <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+          <ul>
+            <% @post.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="whisper_wrapper">
+        <div class="field">
+          <%= form.label :'内容' %>
+          <%= form.text_area :content %>
+        </div> 
+        <div class="button">
+          <%= form.submit value="ささやく" %>
+        </div>
+      </div>
+    <% end %>
+  </body>
+</html>
