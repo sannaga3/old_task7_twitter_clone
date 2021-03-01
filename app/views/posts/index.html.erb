@@ -40,7 +40,13 @@
         <p>みんなのささやき</p>
       </div>
       <div class="whisper_list">
-
+        <% @posts.each do |post| %>
+          <tr class='whisper_content'>
+            <td><%= post.content %></td><br>
+            <td><%= post.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+            <td><p>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</p></td>
+          </tr>
+        <% end %>
       </div>
     </div>
   </div>
