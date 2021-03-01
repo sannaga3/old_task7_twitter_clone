@@ -1,2 +1,53 @@
-<h1>一覧ページ</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Whisper</title>
+  <link href="/assets/normalize.css" rel="stylesheet">
+  <link href="/assets/index.scss" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="header_nav">
+      <a href="#"><img class="logo_image" src="/assets/logo.png" alt="ロゴ"></a>
+      <ul>
+        <a href="#">ささやく</a>
+        <a href="#">自分のささやき一覧</a>
+      </ul>
+    </nav>
+    <div class="bench_area">
+      <img class="bench_image" src="/assets/bench.jpg" alt="ベンチ">
+    </div>
+  </header>
+  <div class="main_wrapper">
+    <div class="today_picture_container">
+      <div class="introduce_picture">
+        <h1>今日の１枚</h1>
+      </div>
+      <img class="duck_image" src="/assets/duck.jpg" alt="カモ">
+      <div class="writer_comment_container">
+       <div class="comment_title_area">
+        <p class="comment_title">作者のひとこと</p>
+       </div>
+       <div class="comment_phrase_area">
+        <p class="coment_phrase">雛の足にちゅうもく！</p>
+       </div>
+      </div>
+    </div>
+    <div class="whisper_wrapper">
+      <div class="whisper_title">
+        <p>みんなのささやき</p>
+      </div>
+      <div class="whisper_list">
+        <%= @post %>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div>
+      <p>© 2021 tetsuya </p>
+    </div>
+  </footer>
+</body>
+</html>
