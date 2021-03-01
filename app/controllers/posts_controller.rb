@@ -6,6 +6,11 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def confirm
+    
+  end
+  
+
   def create
   end
 

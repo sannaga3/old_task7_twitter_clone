@@ -17,7 +17,7 @@
     </nav>
   </header>
   <body>
-    <%= form_with(model: @post, local: true ,url: confirm_posts_path, action: :post) do |form| %>
+    <%= form_with(model: @post, local: true) do |form| %>
       <% if @post.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -31,7 +31,8 @@
       <div class="whisper_wrapper">
         <div class="field">
           <%= form.label :'内容' %>
-          <%= form.text_area :content %>
+          <%= form.hidden_field :content %>
+          <p></p>
         </div> 
         <div class="button">
           <%= form.submit value="ささやく" %>
