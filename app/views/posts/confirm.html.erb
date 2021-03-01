@@ -17,7 +17,7 @@
     </nav>
   </header>
   <body>
-    <%= form_with(model: @post, local: true) do |form| %>
+    <%= form_with(model: @post, local: true ,url: posts_path, action: :create) do |form| %>
       <% if @post.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -32,6 +32,7 @@
         <div class="field">
           <%= form.label :'内容' %>
           <%= form.hidden_field :content %>
+          <%= @post.content %>
           <p></p>
         </div> 
         <div class="button">
