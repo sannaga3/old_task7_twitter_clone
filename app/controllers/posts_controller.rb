@@ -8,6 +8,8 @@ class PostsController < ApplicationController
   end
 
   def confirm
+    @post = Post.new(post_params)
+    @post.id = params[:id]
   end
 
   def create
@@ -15,4 +17,8 @@ class PostsController < ApplicationController
 
   def edit
   end
+  private
+    def post_params
+      params.require(:post).permit(:id, :content)
+    end
 end
