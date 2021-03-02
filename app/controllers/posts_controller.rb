@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:edit, :update, :destroy]
   def index
     @posts = Post.all
   end
@@ -27,11 +28,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if params[:back]
       render :edit
     else
@@ -44,7 +43,6 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_path, notice: "ささやきを削除しました！"
   end
@@ -53,5 +51,9 @@ class PostsController < ApplicationController
   
   def post_params
     params.require(:post).permit(:id, :content)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
