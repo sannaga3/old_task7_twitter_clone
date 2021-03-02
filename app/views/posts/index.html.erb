@@ -13,13 +13,7 @@
 <body>
   <div class="contents_wrapper">
     <header>
-    <nav class="header_nav">
-      <a href="#"><img class="logo_image" src="/assets/logo.png" alt="ロゴ"></a>
-      <ul>
-        <%= link_to 'トップページ', posts_path %>
-        <%= link_to 'ささやく', new_post_path %>
-      </ul>
-    </nav>
+    <%= render 'header' %>
     <div class="bench_area">
       <img class="bench_image" src="/assets/bench.jpg" alt="ベンチ">
     </div>
@@ -57,9 +51,7 @@
     </div>
   </div>
   <footer>
-    <div>
-      <p>© 2021 tetsuya </p>
-    </div>
+    <%= render 'footer' %>
   </footer>
   </div>
 </body>
