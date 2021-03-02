@@ -6,6 +6,12 @@ html {
 h1,h2,h3 {
   font-size: 100%;
 }
+.contents_wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
 // headerここから
 header {
   width: 100%;
@@ -38,7 +44,7 @@ header ul a {
   padding: 0 20px;
 }
 // headerここまで
-// bodyここから
+// formここから
 form {
   width: 100%;
 }
@@ -77,4 +83,24 @@ input {
   width: 60px;
   height: 30px;
 }
-// bodyここまで
+// formここまで
+// hooterここから
+footer {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg, #fff 20%, rgb(120, 179, 125) 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+footer div {
+  line-height: 100%;
+}
+footer p {
+  font-size: 1.5rem;
+  color: rgb(9, 53, 43);
+  text-shadow: 2px 2px #439769;
+}
+// hooterここまで

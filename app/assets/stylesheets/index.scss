@@ -6,6 +6,12 @@ html {
 h1,h2,h3 {
   font-size: 100%;
 }
+.contents_wrapper {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
 // headerここから
 header {
   width: 100%;
@@ -28,7 +34,6 @@ header {
 .bench_area {
   padding-top: 80px;
   width: 100%;
-
   display: flex;
   justify-content: center;
   background-color: #fff;
@@ -115,7 +120,7 @@ header ul a {
   line-height: 50px;
 }
 // main_wrapperここまで
-// section whisper_wrapperここから
+// whisper_wrapperここから
 .whisper_wrapper {
   width: 35%;
   height: 600px;
@@ -158,7 +163,7 @@ header ul a {
 .whisper_content {
   font-size: 1.3rem;
 }
-// section whisper_wrapperここまで
+// whisper_wrapperここまで
 // hooterここから
 footer {
   width: 100%;
@@ -176,3 +181,4 @@ footer p {
   color: rgb(9, 53, 43);
   text-shadow: 2px 2px #439769;
 }
+// hooterここまで
