@@ -35,8 +35,13 @@
           <%= @post.content %>
           <p></p>
         </div> 
-        <div class="button">
-          <%= form.submit value="ささやく" %>
+        <div class="button_area">
+          <div class="whisper_button">
+            <%= form.submit value="ささやく" %>
+          </div>
+          <div class="back_button">
+            <%= form.submit value="戻る", name: 'back' %>
+          </div>
         </div>
       </div>
     <% end %>

@@ -64,7 +64,12 @@ textarea {
   height: 50px;
   font-size: 1.5rem;
 }
-.button {
+.button_area {
+  display: flex;
+  justify-content: center;
+}
+.whisper_button, .back_button{
+  margin: 0 5px;
   text-align: center;
 }
 input {
