@@ -150,6 +150,14 @@ header ul a {
   overflow: scroll;
   padding: 10px;
 }
+.whisper_list a {
+  text-decoration: none;
+  color: #666666;
+  padding-left: 15px;
+}
+.whisper_content {
+  font-size: 1.3rem;
+}
 // section whisper_wrapperここまで
 // hooterここから
 footer {
