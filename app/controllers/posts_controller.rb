@@ -19,7 +19,7 @@ class PostsController < ApplicationController
       render :new
     else
       if @post.save
-        redirect_to posts_path, notice: "ささやき完了"
+        redirect_to posts_path, notice: "ささやきました！"
       end
     end
   end
@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path, notice: "削除しました"
+    redirect_to posts_path, notice: "ささやき削除しました！"
   end
 
   private
