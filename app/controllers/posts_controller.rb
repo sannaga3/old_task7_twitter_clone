@@ -25,6 +25,11 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
   end
 
   def destroy
@@ -34,7 +39,8 @@ class PostsController < ApplicationController
   end
 
   private
-    def post_params
-      params.require(:post).permit(:id, :content)
-    end
+  
+  def post_params
+    params.require(:post).permit(:id, :content)
+  end
 end
