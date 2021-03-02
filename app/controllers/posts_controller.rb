@@ -20,6 +20,8 @@ class PostsController < ApplicationController
     else
       if @post.save
         redirect_to posts_path, notice: "ささやきました！"
+      else
+        render :new
       end
     end
   end
