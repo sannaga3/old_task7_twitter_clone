@@ -12,27 +12,7 @@
         <%= render 'header' %>
       </header>
       <div>
-        <%= form_with(model: @post, local: true ,url: confirm_posts_path, action: :post) do |form| %>
-          <% if @post.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
-              <ul>
-                <% @post.errors.full_messages.each do |message| %>
-                  <li><%= message %></li>
-                <% end %>
-              </ul>
-            </div>
-          <% end %>
-          <div class="whisper_wrapper">
-            <div class="field">
-              <%= form.label :'内容' %>
-              <%= form.text_area :content %>
-            </div> 
-            <div class="whisper_button">
-              <%= form.submit value="ささやく" %>
-            </div>
-          </div>
-        <% end %>
+        <%= render 'form' %>
         <footer>
           <%= render 'footer' %>
         </footer>
