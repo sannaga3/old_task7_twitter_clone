@@ -30,12 +30,21 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
+    if params[:back]
+      render :edit
+    else
+      if @post.update(post_params)
+        redirect_to posts_path, notice: "ささやきを編集しました！"
+      else
+        render :edit
+      end
+    end
   end
 
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path, notice: "ささやき削除しました！"
+    redirect_to posts_path, notice: "ささやきを削除しました！"
   end
 
   private
