@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def confirm
     @post = Post.new(post_params)
     @post.id = params[:id]
+    render :new if @post.invalid?
   end
 
   def create

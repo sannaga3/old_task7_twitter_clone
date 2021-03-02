@@ -48,6 +48,18 @@ header ul a {
 form {
   width: 100%;
 }
+#error_explanation {
+  width: 70%;
+  margin: 0 auto;
+  color: rgb(218, 78, 14);
+  border: solid 3px red;
+}
+#error_explanation h2 {
+  font-size: 2rem;
+}
+#error_explanation ul li {
+  font-size: 1.5rem;
+}
 .whisper_wrapper {
   width: 70%;
   height: 200px;
@@ -84,7 +96,7 @@ input {
   height: 30px;
 }
 // formここまで
-// hooterここから
+// footerここから
 footer {
   width: 100%;
   height: 80px;
@@ -103,4 +115,4 @@ footer p {
   color: rgb(9, 53, 43);
   text-shadow: 2px 2px #439769;
 }
-// hooterここまで
+// footerここまで
